@@ -1,0 +1,72 @@
+/* Общие стили */
+body {
+  background-color: rgb(235, 235, 240);
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  color: #333;
+}
+
+header .intro {
+  color: #666;
+  max-width: 600px;
+  margin: 10px auto;
+}
+
+/* Адаптивная сетка */
+.slots-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Стили для слотов */
+.slot {
+  position: relative; /* Важно для позиционирования img */
+  box-shadow: 7px 7px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  background-color: rgb(243, 243, 243);
+  padding: 20px;
+  min-height: 150px; /* Чтобы слоты не были слишком плоскими */
+}
+
+.slot h3 {
+  margin: 0 0 10px 0;
+  color: #444;
+}
+
+.slot p {
+  margin: 0;
+  color: #555;
+  line-height: 1.5;
+  padding-right: 60px; /* Чтобы текст не заходил под изображение */
+}
+
+.slot img {
+  position: absolute;
+  bottom: 15px; /* Фиксированный отступ снизу */
+  right: 15px;  /* Фиксированный отступ справа */
+  width: 48px;
+  height: 48px;
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 600px) {
+  .slots-container {
+    grid-template-columns: 1fr;
+  }
+  
+  header h1 {
+    font-size: 1.5rem;
+  }
+}
